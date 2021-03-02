@@ -1,0 +1,53 @@
+<div class="container-field">
+    <div class="mypage-wrapper">
+        <div class="list-box">
+            <div class="list-header">
+                <div class="list-title">
+                    みんなのタスク
+                </div>
+                <div class="search-box">
+                  <%= search_form_for @q, url: search_lists_path do |f| %>
+                      <%= f.search_field :name_cont %>
+                      <%= f.submit '検索' %>
+                  <% end %>
+                </div>
+                <div class="task-lists">
+                    <% if @results.present? %>
+                    <% @results.each do |result| %>
+                    <%= link_to task_completions_path(result.id), class: 'task-link' do %>
+                    <div class="task-user-icon">
+                        <% if result.user.image? %>
+                        <%= image_tag result.user.image.thumb50.url, class:"icon" %>
+                        <% else %>
+                        <i class="fas fa-user-circle sample-icon"></i>
+                        <% end %>
+                    </div>
+                    <div class="task-user-name">
+                        <%= result.user.name %>
+                    </div>
+                    <div class="task-name">
+                        <%= result.name %>
+                    </div>
+                    <div class="task-goal">
+                        <%= result.goal %>
+                    </div>
+                    <div class="favorite list-favorite">
+                        <% if result.favorites.count > 0 %>
+                        <p class="favorited-btn"><span><i class="fas fa-heart"></i></span>
+                            <%= result.favorites.count %></p>
+                        <% else %>
+                        <p class="favorite-btn"><span><i class="fas fa-heart"></i></span>
+                            <%= result.favorites.count %></p>
+                        <% end %>
+                    </div>
+                    <% end %>
+                    <% end %>
+                    <% else %>
+                    <div class="list-none">該当のタスクがありません</div>
+                    <% end %>
+                    <%= paginate @results %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

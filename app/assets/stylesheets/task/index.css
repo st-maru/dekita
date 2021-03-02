@@ -1,0 +1,53 @@
+
+.container-field {
+  width: 100vw;
+  min-height: 100vh;
+  padding-top: 70px;
+  background-color: #F8F1F1;
+  color: #333333;
+}
+
+.mypage-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.task-box {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+
+.task-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.task-title {
+  text-align: center;
+  font-size: 2em;
+  padding-bottom: 5px;
+  margin-bottom: 40px;
+}
+
+.task {
+  margin: 1.5em 0;
+}
+
+.list-btn, .add-btn {
+  width: 500px;
+  margin-bottom: 50px;
+}
+
+.list-none {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.5em;
+}
+
+.sample-icon {
+  font-size: 3em;
+}
+
