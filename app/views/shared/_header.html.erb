@@ -1,16 +1,16 @@
 <header class="header">
     <div class="header_inner">
         <div class="header-logo">
-            <%= link_to "#" do %>
+            <%= link_to root_path do %>
                 <%= image_tag 'logo2.png' %>
             <% end %>
         </div>
         <div class="header-search">
             <div class="search">
-                <%= search_form_for @q, url: search_lists_path, class:"search-task" do |f| %>
-                    <%= f.search_field :name_cont, class:"search-box form-control-sm" %>
-                    <%= f.submit "検索", class:"search-btn" %>
-                <% end %>
+                <%# <%= search_form_for @q, url: search_lists_path, class:"search-task" do |f| %> 
+                    <%# <%= f.search_field :name_cont, class:"search-box form-control-sm" %> 
+                    <%# <%= f.submit "検索", class:"search-btn" %> 
+                <%# <% end %> 
             </div>
         </div>
         <div class="header-menu">
@@ -24,28 +24,28 @@
                     </li>
                     <li>
                         <%= link_to "#", class: 'task-add-link' do %>
-                           <i class="fas fa-pencil-alt menu-logo"></i>
+                           <i class="fas fa-user menu-logo"></i>
                            <div class="menu-text">ユーザー情報</div>
                         <% end %>
                     </li>
                     <li>
-                        <%= link_to "#", class: 'task-add-link' do %>
-                           <i class="fas fa-pencil-alt menu-logo"></i>
+                        <%= link_to destroy_user_session_path, method: :DELETE, class: 'task-add-link' do %>
+                           <i class="fas fa-sign-out-alt menu-logo"></i>
                            <div class="menu-text">ログアウト</div>
                         <% end %>
                     </li>
                 <% else %>
                     <li>
-                    <div class="task-add-link login">
+                    <%= link_to new_user_session_path, class: 'task-add-link' do %>
                           <i class="fas fa-sign-in-alt menu-logo"></i>
                           <div class="menu-text">ログイン</div>
-                    </div>
+                    <% end %>
                     </li>
                     <li>
-                    <div class="task-add-link account">
+                    <%= link_to new_user_registration_path, class: 'task-add-link' do %>
                            <i class="fas fa-user-plus menu-logo"></i>
                            <div class="menu-text">アカウント作成</div>
-                    </div>
+                    <% end %>
                     </li>
                 <% end %>
             </ul>
@@ -86,18 +86,6 @@
                     <% end %>
                 </li>
         </ul>
-    </div>
-    <div class="login-popup">
-        <div class="login-content">
-            <%= render "devise/sessions/new" %>
-            <div class="btn btn-link" id="login-close">閉じる</div>
-        </div>
-    </div>
-    <div class="account-popup">
-        <div class="account-content">
-            <%= render "devise/registrations/new" %>
-            <div class="btn btn-link" id="account-close">閉じる</div>
-        </div>
     </div>
 </header>
 
