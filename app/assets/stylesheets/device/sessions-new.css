@@ -1,0 +1,26 @@
+.sigin-in-box {
+  background-color: #fff;
+  color: #333333;
+  width: 100%;
+}
+
+.sign-in-title {
+  color: #18405f;
+  padding: 10px;
+  border-bottom: solid 1px #18405f;
+  font-weight: bold;
+}
+
+.popup-login-logo {
+  padding-right: 5px;
+}
+
+.sign-in-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.field, .sign-in-btn, .guest-login {
+  text-align: center;
+  margin-top: 15px;
+}
