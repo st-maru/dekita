@@ -1,4 +1,91 @@
 <header class="header">
-
+    <div class="header_inner">
+        <div class="header-logo">
+            <%= link_to root_path do %>
+                <%= image_tag 'logo2.png' %>
+            <% end %>
+        </div>
+        <div class="header-search">
+            <div class="search">
+                <%# <%= search_form_for @q, url: search_lists_path, class:"search-task" do |f| %> 
+                    <%# <%= f.search_field :name_cont, class:"search-box form-control-sm" %> 
+                    <%# <%= f.submit "検索", class:"search-btn" %> 
+                <%# <% end %> 
+            </div>
+        </div>
+        <div class="header-menu">
+            <ul class="header-menu-main-list">
+                <% if user_signed_in? %>
+                    <li>
+                        <%= link_to "#", class: 'task-add-link' do %>
+                           <i class="fas fa-pencil-alt menu-logo"></i>
+                            <div class="menu-text">タスク作成</div>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= link_to "#", class: 'task-add-link' do %>
+                           <i class="fas fa-user menu-logo"></i>
+                           <div class="menu-text">ユーザー情報</div>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= link_to destroy_user_session_path, method: :DELETE, class: 'task-add-link' do %>
+                           <i class="fas fa-sign-out-alt menu-logo"></i>
+                           <div class="menu-text">ログアウト</div>
+                        <% end %>
+                    </li>
+                <% else %>
+                    <li>
+                    <%= link_to new_user_session_path, class: 'task-add-link' do %>
+                          <i class="fas fa-sign-in-alt menu-logo"></i>
+                          <div class="menu-text">ログイン</div>
+                    <% end %>
+                    </li>
+                    <li>
+                    <%= link_to new_user_registration_path, class: 'task-add-link' do %>
+                           <i class="fas fa-user-plus menu-logo"></i>
+                           <div class="menu-text">アカウント作成</div>
+                    <% end %>
+                    </li>
+                <% end %>
+            </ul>
+        </div>
+    </div>
+    <div class="header_nav">
+        <ul class="header_nav-list">
+            <% if user_signed_in? %>
+                <li>
+                    <%= link_to "#", class: 'nav-link' do %>
+                        <div class="nav-text">Myタスク</div>
+                    <% end %>
+                </li>
+                <li>
+                    <%= link_to "#", class: 'nav-link' do %>
+                        <div class="nav-text">お気に入りタスク</div>
+                    <% end %>
+                </li>
+              <% end %>
+                <li>
+                    <%= link_to "#", class: 'nav-link' do %>
+                        <div class="nav-text">ランキング</div>
+                    <% end %>
+                </li>
+                <li>
+                    <%= link_to "#", class: 'nav-link' do %>
+                        <div class="nav-text">新着タスク</div>
+                    <% end %>
+                </li>
+                <li>
+                    <%= link_to "#", class: 'nav-link' do %>
+                        <div class="nav-text">タスク一覧</div>
+                    <% end %>
+                </li>
+                <li>
+                    <%= link_to "#", class: 'nav-link' do %>
+                        <div class="nav-text">ユーザー一覧</div>
+                    <% end %>
+                </li>
+        </ul>
+    </div>
 </header>
 
