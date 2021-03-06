@@ -1,0 +1,15 @@
+
+.completion-edit-box {
+  background-color: #fff;
+  color: #333333;
+  width: 70%;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.edit-completion-title {
+  color: #18405f;
+  padding: 10px;
+  border-bottom: solid 1px #18405f;
+  font-weight: bold;
+}

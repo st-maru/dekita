@@ -1,0 +1,163 @@
+.completion-box {
+  color: #333333;
+  background-color: #F8F1F1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 10vh;
+}
+
+.completion-charts {
+  padding: 0.5em 1.5em;
+  margin: 2em 0;
+  background: #FFF;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 10vh;
+}
+
+.completion-title {
+  width: 500px;
+  text-align: center;
+  font-size: 2em;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+}
+
+.completion-memo {
+  margin-bottom: 20px;
+}
+
+#working_time {
+  margin-bottom: 20px;
+}
+
+.favorite {
+  margin-bottom: 10px;
+}
+
+.favorited-btn {
+  color: red;
+}
+
+.favorite-btn {
+  color: #808080; 
+}
+
+.favorited-btn:hover {
+  color: red;
+  text-decoration: none;
+}
+
+.favorite-btn:hover {
+  color: #808080; 
+  text-decoration: none;
+}
+
+.task-user {
+  width: 300px;
+  text-align: center;
+  margin-bottom: 1.5em;
+  word-wrap: break-word;
+}
+
+.user-link {
+  color:#333333;
+  text-decoration: none;
+}
+
+.user-link:hover {
+  color:#333333;
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+.task-edit {
+  margin-left: 10px;
+  text-decoration: none;
+  color:#333333;
+}
+
+.task-delete {
+  margin-left: 5px;
+  text-decoration: none;
+  color:#333333;
+}
+
+.task-edit:hover {
+  text-decoration: none;
+  color:#333333;
+  opacity: 0.7;
+}
+
+.task-delete:hover {
+  text-decoration: none;
+  color:#333333;
+  opacity: 0.7;
+}
+
+.completion-edit {
+  margin-left: 10px;
+  text-decoration: none;
+  color:#333333;
+  float: right;
+}
+
+.completion-delete {
+  margin-left: 5px;
+  text-decoration: none;
+  color:#333333;
+  float: right;
+}
+
+.completion-edit:hover {
+  text-decoration: none;
+  color:#333333;
+  opacity: 0.7;
+}
+
+.completion-delete:hover {
+  text-decoration: none;
+  color:#333333;
+  opacity: 0.7;
+}
+
+.content {
+  width: 500px;
+  padding: 0.5em 1em;
+  margin: 1.5em;
+  color: #232323;
+  background: #fff8e8;
+  border-left: solid 10px #ffc06e;
+  word-wrap: break-word;
+}
+
+.content p {
+  margin: 0; 
+  padding: 0;
+}
+
+.content-add {
+  margin-bottom: 1.5em;
+}
+
+.working-day {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-size: 1.2em;
+}
+
+.main-title {
+  padding-top: 50px;
+}
+
+.main-memo {
+  margin-bottom: 20px;
+}
+
+.pagination {
+  justify-content: center;
+}
+
