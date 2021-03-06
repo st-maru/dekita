@@ -5,14 +5,14 @@
                 <%= image_tag 'logo2.png' %>
             <% end %>
         </div>
-        <div class="header-search">
-            <div class="search">
-                <%# <%= search_form_for @q, url: search_lists_path, class:"search-task" do |f| %> 
-                    <%# <%= f.search_field :name_cont, class:"search-box form-control-sm" %> 
-                    <%# <%= f.submit "検索", class:"search-btn" %> 
-                <%# <% end %> 
-            </div>
-        </div>
+        <%# <div class="header-search"> %>
+            <%# <div class="search"> %>
+                <%# <%= search_form_for @q, url: search_lists_path, class:"search-task" do |f| %>
+                    <%# <%= f.search_field :name_cont, class:"search-box form-control-sm" %>
+                    <%# <%= f.submit "検索", class:"search-btn" %>
+                <%# <% end %>
+            <%# </div> %>
+        <%# </div> %>
         <div class="header-menu">
             <ul class="header-menu-main-list">
                 <% if user_signed_in? %>
@@ -61,22 +61,6 @@
                 </li>
                 <li>
                     <%= link_to "#", class: 'nav-link' do %>
-                        <div class="nav-text">お気に入りタスク</div>
-                    <% end %>
-                </li>
-              <% end %>
-                <li>
-                    <%= link_to "#", class: 'nav-link' do %>
-                        <div class="nav-text">ランキング</div>
-                    <% end %>
-                </li>
-                <li>
-                    <%= link_to "#", class: 'nav-link' do %>
-                        <div class="nav-text">新着タスク</div>
-                    <% end %>
-                </li>
-                <li>
-                    <%= link_to "#", class: 'nav-link' do %>
                         <div class="nav-text">タスク一覧</div>
                     <% end %>
                 </li>
@@ -85,6 +69,7 @@
                         <div class="nav-text">ユーザー一覧</div>
                     <% end %>
                 </li>
+            <% end %>
         </ul>
     </div>
 </header>

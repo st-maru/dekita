@@ -2,20 +2,19 @@
   background-color: #F8F1F1;
 }
 
-.main-wrapper {
+.devise-wrapper {
   background-color: #F8F1F1;
   width: 100vw;
   height: 100vh;
+  padding-top: 200px;
 }
 
 .sign-in-box {
   background-color: #fff;
   color: #333333;
   width: 70%;
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
   border-radius: 5px;
+  margin: 0 auto;
 }
 
 .sign-in-title {
