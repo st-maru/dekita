@@ -17,13 +17,13 @@
             <ul class="header-menu-main-list">
                 <% if user_signed_in? %>
                     <li>
-                        <%= link_to "#", class: 'task-add-link' do %>
+                        <%= link_to new_task_path, class: 'task-add-link' do %>
                            <i class="fas fa-pencil-alt menu-logo"></i>
                             <div class="menu-text">タスク作成</div>
                         <% end %>
                     </li>
                     <li>
-                        <%= link_to "#", class: 'task-add-link' do %>
+                        <%= link_to user_path(current_user.id), class: 'task-add-link' do %>
                            <i class="fas fa-user menu-logo"></i>
                            <div class="menu-text">ユーザー情報</div>
                         <% end %>
@@ -55,18 +55,13 @@
         <ul class="header_nav-list">
             <% if user_signed_in? %>
                 <li>
-                    <%= link_to "#", class: 'nav-link' do %>
+                    <%= link_to tasks_path, class: 'nav-link' do %>
                         <div class="nav-text">Myタスク</div>
                     <% end %>
                 </li>
                 <li>
-                    <%= link_to "#", class: 'nav-link' do %>
-                        <div class="nav-text">タスク一覧</div>
-                    <% end %>
-                </li>
-                <li>
-                    <%= link_to "#", class: 'nav-link' do %>
-                        <div class="nav-text">ユーザー一覧</div>
+                    <%= link_to lists_path, class: 'nav-link' do %>
+                        <div class="nav-text">みんなのタスク</div>
                     <% end %>
                 </li>
             <% end %>

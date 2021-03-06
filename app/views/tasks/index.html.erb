@@ -6,9 +6,6 @@
                   <div class="task-title">
                     <%= @user.name + "のタスク" %>
                   </div>
-                  <div class="task-add">
-                    <%= link_to "タスクを追加する", new_task_path, class: "btn btn-success add-btn" %>
-                  </div>
                   <div class="task-lists">
                       <% if @task.present? %>
                         <% @task.each do |task| %>
