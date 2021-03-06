@@ -1,0 +1,56 @@
+.contents {
+  background-color: #F8F1F1;
+}
+
+.post-wrapper {
+  background-color: #F8F1F1;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 100px;
+}
+
+.task-post-box {
+  background-color: #fff;
+  color: #333333;
+  width: 70%;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+}
+
+.new-task-title {
+  color: #18405f;
+  padding: 10px;
+  border-bottom: solid 1px #18405f;
+  font-weight: bold;
+}
+
+.task-post-logo {
+  padding-right: 5px;
+}
+
+.task-post-form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.task-post-btn {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.form {
+  width: 60%;
+}
+
+.label-name {
+  width: 60%;
+  margin: 0 auto;
+  text-align: left
+}
+
+.btn-primary {
+  width: 20%;
+}

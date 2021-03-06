@@ -4,7 +4,7 @@ class TasksController < ApplicationController
 
   def index
     @user = User.find(current_user.id)
-    @task = @user.tasks.order(id: 'DESC').page(params[:page]).per(10)
+    @task = @user.tasks.order(id: 'DESC').page(params[:page]).per(5)
   end
 
   def new
